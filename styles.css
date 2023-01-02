@@ -1,0 +1,36 @@
+html { 
+    background: url(./background.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+body{
+    margin: 0;
+}
+
+#container{
+    display: flex;
+    flex-direction: row;
+}
+
+.column{
+    height: 100vh;
+}
+
+#container>div:first-child{
+    flex: 3.5;
+}
+
+#image{
+    margin-top: 40%;
+    background-color: black;
+    opacity: 0.5;
+    height: min(100px, 20%);
+}
+
+#container>div:last-child{
+    flex: 6.5;
+    background-color: white;
+}
