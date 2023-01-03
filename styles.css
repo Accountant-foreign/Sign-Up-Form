@@ -8,29 +8,148 @@ html {
 
 body{
     margin: 0;
+    font-family: Tahoma, sans-serif;
 }
 
-#container{
-    display: flex;
-    flex-direction: row;
+@media (orientation: landscape){
+    #container{
+        display: flex;
+        flex-direction: row;
+    }
+    /*For left side*/
+    #container>div:first-child{
+        flex: 3.5;
+        height: 100vh;
+    }
+    
+    #container-two{
+        margin-top: 40%;
+        margin-bottom: 65%;
+        background-color: black;
+        opacity: 0.65;
+        height: min(100px, 20%);
+    
+        display: flex;
+        flex-direction: row;
+    }
+    
+    #container-two>*{
+        flex: 1;
+    }
+    
+    #img>img{
+        max-height: 100%; 
+        min-width: 100%;
+        opacity: 1;
+    }
+    
+    #name>h1{
+        background-color: black;
+        opacity: 1;
+    }
+    
+    /***********************************/
+    /* For the right side */
+    #container>div:last-child{
+        flex: 6.5;
+        background-color: white;
+        height: 100vh;
+    
+        display: flex;
+        flex-direction: column;
+    }
+    #container>div:last-child>*{
+        flex: 1;
+    }
+    
+    #container>div:last-child>div:first-child{
+        /* Align items to bottom first div */
+        display: flex;
+        align-items: flex-end;
+        margin: 20px;
+    }
+    
+    #container>div:last-child>div:nth-of-type(2){
+        flex: 1.5;
+        box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    }
+    #container>div:last-child>div:nth-of-type(2)>*{
+        margin-left: 2em;
+    }
+
+    #container>div:last-child>div:last-child{
+        margin: 3%;
+    }
+
+    .form{
+        display: flex;
+        flex-direction: column;
+
+        margin-bottom: 1em;
+    }
+
+    .col{
+        flex: 1;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .rows{
+        flex: 1;
+
+        display: flex;
+
+        font-size: small;
+    }
+    
+    .col:nth-child(odd){
+        margin-top: 1%;
+    }
+
+    .rows>input:valid{
+        background-color: ivory;
+        border: none;
+        outline: 1px solid green;
+        border-radius: 1px;
+    }
+    .rows>input{
+        margin: 2px;
+        flex: 0.75;
+    }
+    .rows>input:focus {
+        background-color: ivory;
+        border: none;
+        outline: 1px solid black;
+        border-radius: 1px;
+    } 
+
+    #sub{
+        transition: box-shadow 0.2s;
+        transition: opacity 0.2s;
+        background-color: rgb(56, 55, 55);
+        color: white;
+        height: 40px;
+        width: 30%;
+        border-radius: 3px;
+    }
+    #sub:hover{
+        box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    }
+    #sub:active{
+        opacity: 0.7;
+    }
+
+    p>span{
+        color: rgb(56, 55, 55);
+    }
+    p>span:hover{
+        color: rgb(115, 115, 115);
+    }
+
 }
 
-.column{
-    height: 100vh;
-}
+@media (orientation: portrait){
 
-#container>div:first-child{
-    flex: 3.5;
-}
-
-#image{
-    margin-top: 40%;
-    background-color: black;
-    opacity: 0.5;
-    height: min(100px, 20%);
-}
-
-#container>div:last-child{
-    flex: 6.5;
-    background-color: white;
 }

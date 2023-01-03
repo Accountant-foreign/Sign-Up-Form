@@ -5,15 +5,61 @@
     <meta content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css">
+    <script src="./main.js" defer></script>
     <title>Sign up form</title>
 </head>
 <body>
     <div id="container">
         <div class="column">
-            <div id="image"></div>
+            <div id="container-two">
+                <div id="img">
+                    <img src="./moon.png" alt="moon.png" >
+                </div>
+                <div id="name">
+                    <h1>Tiger</h1>
+                </div>
+            </div>
         </div>
         <div class="column" >
-            <div id="form">
+            <div class="row">
+                <p style="font-weight: 550;">
+                    This is <em>NOT</em> a real service! You need something like this in your life to help your realize your deepest dreams!<br>
+                    Sign up <em>now</em> to get started!<br><br>
+                    You <em>know</em> you want to!
+                </p>
+            </div>
+            <div class="row">
+                <div class="col"><h4>Let's do this!</h4></div>
+                <form class="form" action="" id="authorization">
+                    <div class="col">
+                        <div class="rows"><label for="firstName">First Name<span style="color: red;">*</span></label></div>
+                        <div class="rows"><label for="lastName">Last Name<span style="color: red;">*</span></label></div>
+                    </div>
+                    <div class="col">
+                        <div class="rows"><input type="text" placeholder="First name" id="firstName" onkeydown="return /[a-z]/i.test(event.key)" required></div>
+                        <div class="rows"><input type="text" id="lastName" placeholder="Last name" onkeydown="return /[a-z]/i.test(event.key)" required></div>
+                    </div>
+                    <div class="col">
+                        <div class="rows"><label for="email">Email<span style="color: red;">*</span></label></div>
+                        <div class="rows"><label for="phoneNumber">Phone Number<span style="color: red;">*</span></label></div>
+                    </div>
+                    <div class="col">
+                        <div class="rows"><input type="email" id="email" placeholder="example@provider.com" required></div>
+                        <div class="rows"><input type="text" id="phoneNumber" placeholder="Format: 0123456789" minlength="10" maxlength="10" pattern="0[0-9]{9}" onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))" required></div>
+                    </div>
+                    <div class="col">
+                        <div class="rows"><label for="password">Password (5-20 characters)<span style="color: red;">*</span></label></div>
+                        <div class="rows"><label for="confirmPassword">Confirm Password (5-20 characters)<span style="color: red;">*</span></label></div>
+                    </div>
+                    <div class="col">
+                        <div class="rows"><input type="password" id="password" minlength="5" maxlength="20" required onkeyup="validateLength(this)"></div>
+                        <div class="rows"><input type="password" id="confirmPassword" minlength="5" maxlength="20" required onkeyup="validatePassword()"></div>
+                    </div>
+                </form>
+            </div>
+            <div class="row">
+                <input type="submit" form="authorization" value="Create Account" id="sub" id="sub"/><span id="message"></span>
+                <p>Already have an account? <span onclick="location.reload();">Login</span></p>
             </div>
         </div>
     </div>
