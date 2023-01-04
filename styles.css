@@ -17,12 +17,12 @@ body{
         flex-direction: row;
     }
     /*For left side*/
-    #container>div:first-child{
+    .column:first-child{
         flex: 3.5;
         height: 100vh;
     }
     
-    #container-two{
+    .rows-left{
         margin-top: 40%;
         margin-bottom: 65%;
         background-color: black;
@@ -32,25 +32,31 @@ body{
         display: flex;
         flex-direction: row;
     }
-    
-    #container-two>*{
+    .colum{
         flex: 1;
+
+        position: relative;
     }
     
-    #img>img{
-        max-height: 100%; 
-        min-width: 100%;
+    img{
+        height: 100%;
         opacity: 1;
+        position: absolute;
+        left: 20%;
     }
     
-    #name>h1{
-        background-color: black;
+    .colum h1{
+        color: white;
+        font-family: Helvetica, sans-serif;
+        font-size: 2em;
         opacity: 1;
+        position: absolute;
+        top: 10%;
     }
     
     /***********************************/
     /* For the right side */
-    #container>div:last-child{
+    .column:last-child{
         flex: 6.5;
         background-color: white;
         height: 100vh;
@@ -58,26 +64,26 @@ body{
         display: flex;
         flex-direction: column;
     }
-    #container>div:last-child>*{
+    .column:last-child>*{
         flex: 1;
     }
     
-    #container>div:last-child>div:first-child{
+    .column:last-child>div:first-child{
         /* Align items to bottom first div */
         display: flex;
         align-items: flex-end;
         margin: 20px;
     }
     
-    #container>div:last-child>div:nth-of-type(2){
+    .column:last-child>div:nth-of-type(2){
         flex: 1.5;
         box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
     }
-    #container>div:last-child>div:nth-of-type(2)>*{
+    .column:last-child>div:nth-of-type(2)>*{
         margin-left: 2em;
     }
 
-    #container>div:last-child>div:last-child{
+    .column:last-child>div:last-child{
         margin: 3%;
     }
 
@@ -108,15 +114,21 @@ body{
         margin-top: 1%;
     }
 
+    .rows>input{
+        margin: 2px;
+        flex: 0.75;
+    }
     .rows>input:valid{
         background-color: ivory;
         border: none;
         outline: 1px solid green;
         border-radius: 1px;
     }
-    .rows>input{
-        margin: 2px;
-        flex: 0.75;
+    .rows>input:invalid{
+        background-color: ivory;
+        border: none;
+        outline: 1px solid red;
+        border-radius: 1px;
     }
     .rows>input:focus {
         background-color: ivory;
@@ -133,6 +145,7 @@ body{
         height: 40px;
         width: 30%;
         border-radius: 3px;
+        outline: none;
     }
     #sub:hover{
         box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);

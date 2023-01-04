@@ -1,11 +1,16 @@
 var submitButton=document.getElementById('sub');
+const confirmPassword=document.getElementById('confirmPassword');
+const password=document.getElementById('password');
+
 submitButton.disabled=true;
 
-function validateLength(element){
-    if(element.value.length>element.minlength){
-        element.style.outline="1px solid green";
+function validateLength(){
+    let value=password.value;
+    console.log(value.length)
+    if(value.length>=5 && value.length<20){
+        password.style.outline="1px solid green";
     } else {
-        element.style.outline="1px solid red";
+        password.style.outline="1px solid red";
     }
 }
 

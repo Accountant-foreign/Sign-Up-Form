@@ -11,12 +11,12 @@
 <body>
     <div id="container">
         <div class="column">
-            <div id="container-two">
-                <div id="img">
-                    <img src="./moon.png" alt="moon.png" >
+            <div class="rows-left">
+                <div class="colum">
+                    <img src="./moon.png" alt="moon.png">
                 </div>
-                <div id="name">
-                    <h1>Tiger</h1>
+                <div class="colum">
+                    <h1>MOON</h1>
                 </div>
             </div>
         </div>
@@ -45,14 +45,14 @@
                     </div>
                     <div class="col">
                         <div class="rows"><input type="email" id="email" placeholder="example@provider.com" required></div>
-                        <div class="rows"><input type="text" id="phoneNumber" placeholder="Format: 0123456789" minlength="10" maxlength="10" pattern="0[0-9]{9}" onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))" required></div>
+                        <div class="rows"><input type="text" id="phoneNumber" placeholder="Format: 0123456789" minlength="10" maxlength="10" pattern="[0-9]{10}" onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))" required></div>
                     </div>
                     <div class="col">
                         <div class="rows"><label for="password">Password (5-20 characters)<span style="color: red;">*</span></label></div>
                         <div class="rows"><label for="confirmPassword">Confirm Password (5-20 characters)<span style="color: red;">*</span></label></div>
                     </div>
                     <div class="col">
-                        <div class="rows"><input type="password" id="password" minlength="5" maxlength="20" required onkeyup="validateLength(this)"></div>
+                        <div class="rows"><input type="password" id="password" minlength="5" maxlength="20" onkeyup="validateLength()" required></div>
                         <div class="rows"><input type="password" id="confirmPassword" minlength="5" maxlength="20" required onkeyup="validatePassword()"></div>
                     </div>
                 </form>
